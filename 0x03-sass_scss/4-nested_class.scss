@@ -6,7 +6,7 @@ $varcolor:#3D3D3D;
 $bacolor:#FF0000;
 body {
     color: $varcolor;
-    body .red {
+    .red {
         color: $bacolor;
     }
 }
