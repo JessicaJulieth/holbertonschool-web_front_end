@@ -6,7 +6,7 @@ You must create H* tags from 1 to 5
 You must use @for statement
 */
 
-@for $x from 1 to 5 {
+@for $x from 1 to 6 {
     h#{$x} {
         font-size: #{$x}px;
     }
