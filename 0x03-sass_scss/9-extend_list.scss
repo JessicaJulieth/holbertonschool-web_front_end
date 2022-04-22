@@ -16,12 +16,12 @@ $bacolor:#FF0000;
     @extend %Extended;
 }
 
-.success, .info {
+.success {
     color: $varcolor;
     @extend %Extended;
 }
 
-.warning, .info {
+.warning {
     color: $bacolor;
     @extend %Extended;
 }
