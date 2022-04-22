@@ -9,7 +9,10 @@ $bacolor:#FF0000;
 %Extended {
     font-size: 12px;
 }
-.info, .success, .warning {
+.success, .warning {
+    @extend %Extended;
+}
+.info {
     @extend %Extended;
 }
 
