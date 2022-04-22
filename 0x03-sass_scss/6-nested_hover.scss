@@ -1,0 +1,12 @@
+/*Write a Sass file that assigns
+Text color #FF0000 to button tags
+When the user hovers over button tags, text color should change to #00FF00
+*/
+$varcolor:#3D3D3D;
+$bacolor:#FF0000;
+button {
+    color: $varcolor;
+    &:hover {
+        color: $bacolor;
+    }
+}
