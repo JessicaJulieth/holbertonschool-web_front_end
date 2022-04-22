@@ -2,11 +2,11 @@
 Text color #FF0000 to button tags
 When the user hovers over button tags, text color should change to #00FF00
 */
-$varcolor:#3D3D3D;
+$varcolor:#00FF00;
 $bacolor:#FF0000;
 button {
-    color: $varcolor;
+    color: $bacolor;
     &:hover {
-        color: $bacolor;
+        color: $varcolor;
     }
 }
