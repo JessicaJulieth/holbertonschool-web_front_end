@@ -1,0 +1,11 @@
+/*Write a Sass file that create
+a class for each name in the list $list-names and
+assigns the background image based on the name 
+*/
+@import '11-photos.scss';
+
+@each $x in $list-names {
+    .photo-#{x} {
+        background: image-url("photos/#{$x}.jpg") no-repeat;
+    }
+}
