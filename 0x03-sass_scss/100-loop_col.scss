@@ -7,7 +7,7 @@ You must create .col-* class from 1 to 4
 You must use a @for statement
 */
 
-@for $width from 1 to 4 {
+@for $width from 1 to 5 {
     .col-#{$width} {
     width: (100% / $width);
     }
