@@ -1,0 +1,23 @@
+/* Write a Sass file that sorts the variable $list_to_sort and prints the sorted list in the debug output.
+*/
+
+
+$sort-order: a b c d e f g h i j k l m n o p 
+            q r s t u v w x y z !default;
+
+
+@function sort($list_to_sortt, $sort-order) {
+    @for $i from 1 through length($list_to_sort) {
+    @for $j from $i * -1 through -1 {
+        $j: abs($j);
+        @if $j > 1 and compare(nth($list_to_sort, $j),
+                    nth($list_to_sort, $j - 1), $sort-order) {
+            $list_to_sort: swap($list_to_sort, $j, $j - 1);
+          }
+      }
+  }
+  @return $list_to_sort;
+}
+$list_to_sort: internships placements classes geeksforgeeks courses;
+$sort: sort($list_to_sort, $sort-order);
+    @debug $sort
