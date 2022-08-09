@@ -509,5 +509,5 @@ ul.row {
     transition: var(--transition-duration) var(--transition-cubic-bezier);
 }
 .card-work:hover .card-outer {
-    scale: scale(0.95);
+    transform: scale(0.95);
 }
