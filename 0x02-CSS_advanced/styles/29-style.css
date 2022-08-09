@@ -334,24 +334,23 @@ h1, h2, h3, h4, h5, h6 {
     display: var(--nav-item-display);
     margin: var(--nav-item-margin);
 }
-
 .nav .nav-link {
     display: block;
     padding: 0.5rem 1rem;
-    clear: content;
-    position:absolute;
+}
+.nav .nav-link:hover {
+    color: var(--nav-item-link-hover);
+}
+.nav .nav-link::before {
+    content: "";
+    position: absolute;
     top: 0;
     left: 0;
     background-color: var(--color-white);
     width: 0;
-    height: 20%rem;
+    height: 0.2rem;
 }
-.nav-link .nav-link:hover {
-    background-color: var(--color-primary);
-    width: 100%;
-}
-.nav .nav-link:hover {
-    color: var(--nav-item-link-hover);
+.nav .nav-item:hover .nav-link::before {
     background-color: var(--color-primary);
     width: 100%;
 }
