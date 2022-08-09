@@ -217,6 +217,7 @@ a:active {
     color: var(--transition-property);
     text-decoration: var(--button-hover-text-decoration);
     background: var(--transition-property);
+    transition-duration: var(--transition-duration);
     transition-property: var(--background-color);
 }
 h1, h2, h3, h4, h5, h6 {
