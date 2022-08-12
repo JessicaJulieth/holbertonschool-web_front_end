@@ -714,7 +714,7 @@
   /* Form group
      ============================= */
 
-    .form-group {
+    form-group {
         padding: 1rem;
         margin: 0;
         background-color: var(--color-white);
