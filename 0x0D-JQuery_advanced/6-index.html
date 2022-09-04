@@ -24,7 +24,7 @@
                 }
                 function addNewMember(firstName, lastName, position) {
                     if (position == "before") {
-                        $("table tbody").prepend("<tr>ANTES</tr>");
+                        $("table tbody").prepend("<tr>BEFORE</tr>");
                         $("tbody tr").first().append(`<td>${firstName}</td>`, `<td>${lastName}</td>`, `<td>(x)</td>`);
                         $("tbody tr td").eq(2).addClass(firstName + lastName);
                     }
