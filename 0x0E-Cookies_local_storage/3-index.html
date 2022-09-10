@@ -21,8 +21,9 @@
             <input id="email" placeholder="Email">
             <button type="button" class="btn1" onclick="setCookies()">Log me in</button>
         </div>
+
         <script>
-            const setCookies = () => {
+            function setCookies() {
                 let d = new(Date);
                 d.setTime(d.getTime() + 10*24*60*60*1000);
                 let expires = d.toGMTString();
@@ -30,14 +31,16 @@
                 document.cookie = `email=${document.getElementById("email").value}; expires=${expires}`;
                 showWelcomeMessageOrForm();
             };
-            const showCookies = () => {
+
+            function showCookies() {
                 let p = document.createElement("p");
                 let firstname = getCookie("firstname");
                 let email = getCookie("email");
                 p.innerText = `Email: ${email} - Firstname: ${firstname}`;
                 document.body.appendChild(p);
             };
-            const getCookie = (name) => {
+
+            function getCookie(name) {
                 let keyVals = document.cookie.split("; ");
                 for (let i in keyVals) {
                     let kv = keyVals[i].split("=");
@@ -45,19 +48,23 @@
                 }
                 return "";
             };
-            const showForm = () => {
-                document.getElementById("#form").style.display = "block";
+
+            function showForm() {
+                document.getElementById("form").style.display = "block";
             };
-            const hideForm = () => {
-                document.getElementById("#form").style.display = "none";
+
+            function hideForm() {
+                document.getElementById("form").style.display = "none";
             };
-            const deleteCookiesAndShowForm = () => {
+
+            function deleteCookiesAndShowForm() {
                 let h1 = document.getElementById("#h1");
                 h1.remove();
                 document.cookie = "firstname=; email=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
                 showForm();
             };
-            const showWelcomeMessageOrForm = () => {
+
+            function showWelcomeMessageOrForm() {
                 let fn = getCookie("firstname");
                 if (fn) {
                     hideForm();
@@ -76,6 +83,7 @@
 
                 } else showForm();
             };
+            
             showWelcomeMessageOrForm();
         </script>
     </body>
