@@ -1,11 +1,38 @@
-function checkCookie() {
-		let username = getCookie("username");
-		if (username != "") {
-		 alert("Welcome again " + username);
-		} else {
-			username = prompt("Please enter your name:", "");
-			if (username != "" && username != null) {
-				setCookie("username", username, 365);
-			}
-		}
-	}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <title>Task 0</title>
+    </head>
+
+    <body>
+        <div>
+            <h1>Login to the Website</h1>
+            <input type="text" id="firstname" placeholder="Firstname">
+            <input type="text" id="email" placeholder="Email">
+            <button type="button" class="btn1" onclick="setCookies()">Log me in</button>
+        </div>
+
+        <div>
+            <h1>Cookies</h1>
+            <button class="btn2" onclick="showCookies()">Show the cookies</button>
+        </div>
+
+        <script type="application/javascript">
+    			function setCookies() {
+                document.cookie = `firstname=${document.getElementById("firstname").value}`;
+                document.cookie = `email=${document.getElementById("email").value}`;
+            };
+
+            function showCookies() {
+							let cookies =  document.cookie.split(";");
+      				let p = document.createElement("p");
+      				let txt = document.createTextNode("Cookies: " + cookies[0].split("=")[1] + ", " + cookies[1].split("=")[1]);
+
+      				p.appendChild(txt);
+      				document.body.appendChild(p);
+    				}
+  			</script>
+    </body>
+
+</html>
