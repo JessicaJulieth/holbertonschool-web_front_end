@@ -6,16 +6,11 @@
     </head>
 
     <body>
-        <div>
-            <h1>Login to the Website</h1>
+        <div id="form">
+            <h2>Login to the website</h2>
             <input type="text" id="firstname" placeholder="Firstname">
             <input type="text" id="email" placeholder="Email">
-            <button type="button" class="btn1" onclick="setCookies()">Log me in</button>
-        </div>
-
-        <div>
-            <h1>Cookies</h1>
-            <button class="btn2" onclick="showCookies()">Show the cookies</button>
+            <button onclick="setCookies()">Log me in</button>
         </div>
 
         <script type="application/javascript">
@@ -25,6 +20,7 @@
                 let expires = d.toGMTString();
                 document.cookie = `firstname=${document.getElementById("firstname").value}; expires=${expires}`;
                 document.cookie = `email=${document.getElementById("email").value}; expires=${expires}`;
+                showWelcomeMessageOrForm();
             };
 
             function showCookies() {
@@ -44,6 +40,12 @@
                 }
                 return "";
             }
+
+            function showForm() {
+                let h1 = document.getElementById("h1");
+                h1.remove();
+        document.getElementById("form").style.display = "block";
+    }
 
   			</script>
     </body>
