@@ -28,7 +28,7 @@
            }
 
            function displayCart() {
-            let keys = Object.keys(localStorage);
+            let keys = Object.keys(sessionStorage);
             if (keys.length > 0) {
               let p = document.createElement("p");
               p.innerText = `You previously had ${keys.length} items in your cart`;  
